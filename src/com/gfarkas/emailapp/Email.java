@@ -10,6 +10,14 @@ public class Email {
     private String alternateEmail;
 
     // Constructor to receive the first name and last name
+    public Email(String firstName, String lastName) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+        System.out.println("Email created: " + this.firstName + " " + this.lastName);
+
+    }
 
     // Ask for department
 
