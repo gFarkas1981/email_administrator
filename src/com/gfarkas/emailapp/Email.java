@@ -91,4 +91,26 @@ public class Email {
         this.password = password;
 
     }
+
+    // Get password
+    public String getPassword() {
+
+        return password;
+
+    }
+
+    // Get alternate email
+    public String getAlternateEmail() {
+
+        return alternateEmail;
+
+    }
+
+    // Get mailboxCapacity
+    public int getMailboxCapacity() {
+
+        return mailboxCapacity;
+
+    }
+
 }
