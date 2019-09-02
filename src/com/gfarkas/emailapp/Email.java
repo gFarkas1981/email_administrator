@@ -20,11 +20,9 @@ public class Email {
         this.firstName = firstName;
         this.lastName = lastName;
 
-        System.out.println("Email created: " + this.firstName + " " + this.lastName);
 
         // Call a function asking for the department - return the department
         this.department = setDepartment();
-        System.out.println("Department: " + this.department);
 
         // Call a function that returns a random password
         this.password = randomPassword(defaultPasswordLength);
@@ -32,7 +30,6 @@ public class Email {
 
         // Combine elements to generate email
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + "." + companySuffix;
-        System.out.println("Your email address is: " + email);
 
     }
 
@@ -40,8 +37,8 @@ public class Email {
     // Ask for department
     private String setDepartment() {
 
-        System.out.print("Department codes\n\n1 for sales\n2 for Development\n3 for Accounting\n0 for none");
-        System.out.println();
+        System.out.print("New worker: " + firstName + ". Department codes\n\n1 for sales\n2 for Development\n3 for Accounting\n0 for none");
+        System.out.println("\n\nPlease enter the number of department!\n");
         Scanner in = new Scanner(System.in);
         int depChoice = in.nextInt();
 
@@ -110,6 +107,15 @@ public class Email {
     public int getMailboxCapacity() {
 
         return mailboxCapacity;
+
+    }
+
+    //Show info
+    public String showInfo() {
+
+        return "Display name: " + firstName + " " + lastName + "\n" +
+                "Company email: " + email + "\n" +
+                "Mailbox capacity: " + mailboxCapacity + "MByte";
 
     }
 
